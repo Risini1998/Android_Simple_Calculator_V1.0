@@ -13,12 +13,12 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        String sum = getIntent().getStringExtra("sum");
-        System.out.println("-----------------------------------------------------");
-        System.out.println(sum);
+        String answr = getIntent().getStringExtra("answr");
+        System.out.println(answr);
         TextView output = findViewById(R.id.output);
-        output.setText("this answer is - " + sum);
-        Button back = findViewById(R.id.button);
+        output.setText(answr);
+
+        Button back = findViewById(R.id.backbtn);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
